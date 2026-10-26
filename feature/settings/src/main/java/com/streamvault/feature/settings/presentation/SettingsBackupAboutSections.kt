@@ -568,6 +568,12 @@ public fun LazyListScope.settingsAboutSection(
             ,
                 modifier = if (targetItemId == "about.github") targetFocusModifier else Modifier,)
             ClickableSettingsRow(
+                label = stringResource(R.string.settings_based_on),
+                value = stringResource(R.string.settings_based_on_url),
+                onClick = { onOpenUri(context.getString(R.string.settings_based_on_url)) }
+            ,
+                modifier = if (targetItemId == "about.based_on") targetFocusModifier else Modifier,)
+            ClickableSettingsRow(
                 label = stringResource(R.string.settings_open_source_licenses),
                 value = "",
                 onClick = { onOpenUri(OPEN_SOURCE_LICENSES_URL) },
